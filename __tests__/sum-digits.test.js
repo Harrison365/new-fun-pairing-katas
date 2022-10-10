@@ -1,4 +1,25 @@
-const sumDigits = require('../katas/sum-digits');
+const sumDigits = require("../katas/sum-digits");
+
+describe("sumDigits", () => {
+  test("returns input when given one digit", () => {
+    expect(sumDigits(8)).toBe(8);
+    expect(sumDigits(2)).toBe(2);
+  });
+  test("returns their sum when given two digits", () => {
+    expect(sumDigits(12)).toBe(3);
+    expect(sumDigits(25)).toBe(7);
+  });
+  test("returns their sum when given three or more digits", () => {
+    expect(sumDigits(123)).toBe(6);
+    expect(sumDigits(456)).toBe(15);
+    expect(sumDigits(55555)).toBe(25);
+  });
+  test("returns their sum when given a decimal number", () => {
+    expect(sumDigits(12.5)).toBe(8);
+    expect(sumDigits(2.5)).toBe(7);
+    expect(sumDigits("2atp5")).toBe(7);
+  });
+});
 
 // Tests for sumDigits
 
