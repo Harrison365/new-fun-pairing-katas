@@ -20,6 +20,22 @@ should return:
 ]
 */
 
-function orderVeg() {}
+function orderVeg(Arr) {
+  for (var i = 1; i < Arr.length; i++)
+    for (var j = 0; j < i; j++)
+      if (Arr[i].quantity < Arr[j].quantity) {
+        var x = Arr[i];
+        Arr[i] = Arr[j]; //doesnt mutate original due to new reference (because it is saved as the reference to the original not as the value)
+        Arr[j] = x;
+      }
+  return Arr;
+}
 
-module.exports = orderVeg;
+//OR!!!!!!
+
+const orderVeg2 = (Arr) => {
+  // const vegetablesCopy = [...Arr]; //DON'T See the need for this
+  return Arr.sort((a, b) => a.quantity - b.quantity);
+};
+
+module.exports = { orderVeg, orderVeg2 };
