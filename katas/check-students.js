@@ -8,6 +8,21 @@
   --> false
 */
 
-function checkStudents() {}
+function checkStudents(Arr, month) {
+  return Arr.every((student) => {
+    return student.cohort === month;
+  });
+}
+
+console.log(
+  checkStudents(
+    [
+      { name: "Ben", cohort: "April" },
+      { name: "Amanda", cohort: "April" },
+      { name: "Matt", cohort: "May" },
+    ],
+    "April"
+  )
+);
 
 module.exports = checkStudents;
