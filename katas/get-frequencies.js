@@ -12,6 +12,27 @@
   }
 */
 
-function getFrequencies() {}
+function getFrequencies(word) {
+  let arr = word.split("");
+  let obj = {};
 
+  const letters = arr.filter((character) => {
+   if (/[A-Za-z]/g.test(character)){
+    return character
+   }
+
+  })
+  letters.forEach((letter) => {
+    if (!obj.hasOwnProperty(letter)) {
+      obj[letter] = 1;
+    } else {
+      obj[letter]++;
+    }
+
+})
+return obj;
+}
+
+console.log(getFrequencies("hello"))
+console.log(getFrequencies("hello251%"))
 module.exports = getFrequencies;
