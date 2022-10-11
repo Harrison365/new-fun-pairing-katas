@@ -16,13 +16,14 @@
 //   return newArr;
 // }
 
-// function removeDuplicates(Arr) {
-//   const newArr = [];
-//   for (let i = 0; i < Arr.length; i++) {
-//     if (!newArr.includes(Arr[i])) {
-//       newArr.push(Arr[i]);
-//     }
-//   }
+function removeDuplicates(Arr) {
+  const newArr = [];
+  for (let i = 0; i < Arr.length; i++) {
+    if (!newArr.includes(Arr[i])) {
+      newArr.push(Arr[i]);
+    }
+  }
+}
 
 //   return newArr;
 // }
