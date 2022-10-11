@@ -9,17 +9,29 @@ function getMostRepeated(str) {
   let arr = str.split("");
   let obj = {};
 
-  arr.forEach((letter) => {
+  const letters = arr.filter((character) => {
+   if (/[A-Za-z]/g.test(character)){
+    return character
+   }
+
+  })
+
+
+console.log(letters)
+
+
+  letters.forEach((letter) => {
     if (!obj.hasOwnProperty(letter)) {
       obj[letter] = 1;
     } else {
       obj[letter]++;
     }
   });
-  console.log(Object.keys(obj));
-  return Object.keys(obj).reduce((a, b) => (obj[a] > obj[b] ? a : b));
+
+return Object.keys(obj).reduce((a, b) => (obj[a] > obj[b] ? a : b));
 }
 
-console.log(getMostRepeated("hello"));
+
+console.log(getMostRepeated("%4jhjhjahaa%%%%"));
 
 module.exports = getMostRepeated;
