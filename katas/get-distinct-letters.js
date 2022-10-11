@@ -11,12 +11,12 @@ function getDistinctLetters(word1, word2) {
 
   let newArr = [];
 
-  arr1.map((letter1) => {
+  arr1.forEach((letter1) => {
     if (!arr2.includes(letter1)) {
       newArr.push(letter1);
     }
   });
-  arr2.map((letter2) => {
+  arr2.forEach((letter2) => {
     if (!arr1.includes(letter2)) {
       newArr.push(letter2);
     }
