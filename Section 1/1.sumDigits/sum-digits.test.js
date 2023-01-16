@@ -1,4 +1,4 @@
-const sumDigits = require("../katas/sum-digits");
+const sumDigits = require("./sum-digits");
 
 describe("sumDigits", () => {
   test("returns input when given one digit", () => {

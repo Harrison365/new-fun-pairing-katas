@@ -12,6 +12,14 @@
 ], 'root') should return 9
 */
 
-function countVeg() {}
+function countVeg(arr, type) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].type === type) {
+      sum += arr[i].quantity;
+    }
+  }
+  return sum;
+}
 
 module.exports = countVeg;

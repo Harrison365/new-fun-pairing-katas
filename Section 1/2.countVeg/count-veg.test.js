@@ -1,3 +1,5 @@
+const countVeg = require("./count-veg.js");
+
 describe("countVeg", () => {
   test("returns the quantity of a single matching type of vegetable", () => {
     const actual = countVeg(
