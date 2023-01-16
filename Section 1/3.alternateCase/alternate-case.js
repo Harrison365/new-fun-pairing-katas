@@ -6,6 +6,16 @@
   'hello world' would become 'HeLlO wOrLd'
 */
 
-function alternateCase() {}
+function alternateCase(str) {
+  let alternatingString = "";
+  // start with a capital letter
+  let toUpper = true;
+  for (letter of str) {
+    alternatingString += toUpper ? letter.toUpperCase() : letter.toLowerCase();
+    // if letter wasn't a space then toggle toUpper
+    if (letter !== " ") toUpper = !toUpper;
+  }
+  return alternatingString;
+}
 
 module.exports = alternateCase;
