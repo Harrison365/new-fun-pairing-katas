@@ -7,15 +7,29 @@
     --> 6
 */
 
+// function sumDigits(num) {
+//   let numberStrings = num.toString().split("");
+//   let numberStringNumbers = numberStrings.map(Number);
+//   let count = 0;
+//   let onlyNumbers = numberStringNumbers.forEach((numberString) => {
+//     if (!isNaN(numberString)) {
+//       count += numberString;
+//     }
+//   });
+//   return count;
+// }
+
 function sumDigits(num) {
-  let numberStrings = num.toString().split("");
-  let numberStringNumbers = numberStrings.map(Number);
   let count = 0;
-  let onlyNumbers = numberStringNumbers.forEach((numberString) => {
-    if (!isNaN(numberString)) {
-      count += numberString;
+  let numString = num.toString();
+
+  for (let i = 0; i < numString.length; i++) {
+    let digit = Number(numString[i]);
+    if (!isNaN(digit)) {
+      count += digit;
     }
-  });
+  }
+
   return count;
 }
 
