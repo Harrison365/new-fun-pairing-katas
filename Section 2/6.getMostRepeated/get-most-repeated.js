@@ -6,19 +6,17 @@
 // const getFrequencies = require('./get-frequencies');
 
 function getMostRepeated(str) {
+  if (str === "") {
+    return "";
+  }
   let arr = str.split("");
   let obj = {};
 
   const letters = arr.filter((character) => {
-   if (/[A-Za-z]/g.test(character)){
-    return character
-   }
-
-  })
-
-
-console.log(letters)
-
+    if (/[A-Za-z]/g.test(character)) {
+      return character;
+    }
+  });
 
   letters.forEach((letter) => {
     if (!obj.hasOwnProperty(letter)) {
@@ -28,10 +26,7 @@ console.log(letters)
     }
   });
 
-return Object.keys(obj).reduce((a, b) => (obj[a] > obj[b] ? a : b));
+  return Object.keys(obj).reduce((a, b) => (obj[a] > obj[b] ? a : b));
 }
-
-
-console.log(getMostRepeated("%4jhjhjahaa%%%%"));
 
 module.exports = getMostRepeated;
