@@ -1,4 +1,4 @@
-const orderVeg = require("./order-veg");
+const { orderVeg } = require("./order-veg");
 
 describe("orderVeg", () => {
   test("returns a *new* array", () => {
@@ -26,4 +26,3 @@ describe("orderVeg", () => {
     ]);
   });
 });
-Footer;

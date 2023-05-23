@@ -33,13 +33,15 @@ should return:
 
 //OR!!!!!!
 
-function orderVeg2(Arr) {
+function orderVeg(Arr) {
   if (Arr.length === 1) {
-    return Arr;
+    return Arr.slice();
   }
-  return Arr.sort((a, b) => a.quantity - b.quantity);
+  const newArr = Arr.slice().sort((a, b) => a.quantity - b.quantity);
+
+  return newArr;
 }
 
-console.log(orderVeg2([{ name: "Broccoli", type: "brassica", quantity: 1 }]));
+console.log(orderVeg([{ name: "Broccoli", type: "brassica", quantity: 1 }]));
 
-// module.exports = { orderVeg, orderVeg2 };
+module.exports = { orderVeg };

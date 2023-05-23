@@ -1,3 +1,5 @@
+const areOrdered = require("./are-ordered");
+
 describe("areOrdered", () => {
   test("returns true for an array with numbers in ascending order", () => {
     expect(areOrdered([1, 2, 3, 4, 5])).toBe(true);

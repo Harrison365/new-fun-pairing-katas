@@ -8,13 +8,22 @@
 
 function alternateCase(str) {
   let alternatingString = "";
-  // start with a capital letter
   let toUpper = true;
-  for (letter of str) {
-    alternatingString += toUpper ? letter.toUpperCase() : letter.toLowerCase();
-    // if letter wasn't a space then toggle toUpper
-    if (letter !== " ") toUpper = !toUpper;
+
+  for (let i = 0; i < str.length; i++) {
+    const letter = str[i];
+
+    if (toUpper) {
+      alternatingString += letter.toUpperCase();
+    } else {
+      alternatingString += letter.toLowerCase();
+    }
+
+    if (letter !== " ") {
+      toUpper = !toUpper;
+    }
   }
+
   return alternatingString;
 }
 
