@@ -1,3 +1,4 @@
+const { max, min } = require("./max-and-min");
 describe("max", () => {
   test("returns the maximum value in an array", () => {
     expect(max([1, 5, 3, 8, 2])).toBe(8);

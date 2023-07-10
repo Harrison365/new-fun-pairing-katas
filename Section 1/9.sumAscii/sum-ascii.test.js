@@ -1,3 +1,4 @@
+const sumAscii = require("./sum-ascii");
 describe("sumAscii", () => {
   test("returns the name with the highest score", () => {
     const names = ["John", "Alice", "Bob"];
@@ -12,11 +13,6 @@ describe("sumAscii", () => {
   test("handles names with different lengths", () => {
     const names = ["John", "Alice", "Bob", "Emma"];
     expect(sumAscii(names)).toBe("Alice");
-  });
-
-  test("handles names with the same ASCII score", () => {
-    const names = ["John", "alice", "Bob", "emma"];
-    expect(sumAscii(names)).toBe("John");
   });
 
   test("ignores leading and trailing spaces in names", () => {

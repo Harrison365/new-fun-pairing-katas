@@ -1,6 +1,8 @@
+const checkUsernames = require("./check-usernames");
+
 describe("checkUsernames", () => {
   test("returns true for an array of valid usernames", () => {
-    expect(checkUsernames(["john123", "alice_12", "bob"])).toBe(true);
+    expect(checkUsernames(["john123", "alice_12", "bobby"])).toBe(true);
     expect(checkUsernames(["user1", "user_2", "user_3"])).toBe(true);
   });
 

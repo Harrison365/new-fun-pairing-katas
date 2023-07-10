@@ -1,3 +1,5 @@
+const sumArgs = require("./sum-args");
+
 describe("sumArgs", () => {
   test("returns the sum of multiple arguments", () => {
     expect(sumArgs(1, 2, 3)).toBe(6);
