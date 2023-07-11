@@ -23,6 +23,7 @@ function removeDuplicates(Arr) {
       newArr.push(Arr[i]);
     }
   }
+  return newArr;
 }
 
 //   return newArr;
