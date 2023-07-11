@@ -1,5 +1,6 @@
 # Pairing Katas
 
+test
 Welcome to your first day of Pairing Katas, and your first sprint!
 
 Check out `setup.md` to get started. If you're on GitHub, there's a link to it above here. If you're on VSCode, find it in the Explorer to the left.
