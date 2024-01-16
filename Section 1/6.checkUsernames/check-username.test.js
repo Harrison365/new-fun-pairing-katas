@@ -9,6 +9,7 @@ describe("checkUsernames", () => {
   test("returns false for an array with an invalid username", () => {
     expect(checkUsernames(["john123", "alice_12", "bob!"])).toBe(false);
     expect(checkUsernames(["user1", "user_2", "user3!"])).toBe(false);
+    expect(checkUsernames(["user1", "user_2", "us!r3"])).toBe(false);
     expect(checkUsernames(["too_long_username_1234567890"])).toBe(false);
   });
 
